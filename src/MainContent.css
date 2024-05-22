@@ -1,0 +1,262 @@
+.main-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: flex-start;
+  z-index: 1;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+}
+
+.about-me-header {
+  font-size: 30px;
+  text-align: start;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+.aboutMeprg {
+  font-size: 28px;
+  text-align: start;
+  font-style: italic;
+}
+
+.paragraphMain {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.about-me-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.about-me-icon {
+  margin-right: 20px;
+}
+
+.icon-paragraph {
+  margin-top: 2vw;
+  text-align: center;
+}
+
+.code-icon {
+  color: #082e43;
+}
+
+.handshake-icon {
+  color: #156a2c;
+}
+
+.comments-icon {
+  color: #9c8748;
+}
+
+.rocket-icon {
+  color: #6e1d14;
+}
+
+.services-description {
+  font-size: 16px;
+  margin-bottom: 50px !important;
+  margin-top: 50px;
+}
+
+.skillsHeader,
+.languagesHeader,
+.educationHeader2 {
+  font-size: 36px;
+}
+
+.educationHeader3 {
+  font-size: 18px;
+  text-align: center;
+}
+
+.educationParagraph {
+  font-size: 18px;
+  text-align: center;
+}
+
+.education-cards {
+  justify-content: space-between;
+}
+
+.education-card {
+  flex: 1;
+  max-width: 100%;
+}
+
+.education-icon {
+  margin: 0 auto;
+  display: block;
+  margin-top: 50px; 
+  color: #0e3a50;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.skill-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.skill-card p {
+  margin-left: 20px;
+}
+
+.services-text {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.services-description {
+  font-size: 18px;
+  margin-bottom: 80px;
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.slide-in:nth-child(1) {
+  animation: slideIn 3s forwards;
+}
+
+.slide-in:nth-child(2) {
+  animation: slideIn 2s forwards 1s;
+}
+
+.slide-in:nth-child(3) {
+  animation: slideIn 2s forwards 1s;
+}
+
+.slide-in:nth-child(4) {
+  animation: slideIn 2s forwards 1.5s;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.connect-container {
+  margin-top: 4vw;
+  margin-bottom: 4vw;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.connect-text {
+  font-size: 36px;
+  font-style: italic;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+}
+
+.connect-text a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 850px) {
+  .column {
+    flex: 100%;
+    margin: 5px 0;
+  }
+
+  .about-me-header {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .aboutMeprg {
+    font-size: 22px;
+  }
+
+  .paragraphMain {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+
+  .skillsHeader,
+  .languagesHeader,
+  .educationHeader2 {
+    font-size: 28px;
+  }
+
+  .educationHeader3,
+  .educationParagraph {
+    font-size: 16px;
+  }
+
+  .skill-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skill-card p {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .services-text {
+    font-size: 20px;
+  }
+
+  .services-description {
+    font-size: 16px;
+  }
+
+  .connect-text {
+    font-size: 28px;
+    padding: 8px 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

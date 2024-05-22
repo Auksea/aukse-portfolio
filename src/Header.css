@@ -1,0 +1,114 @@
+.header {
+    position: relative;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+}
+
+.content {
+    margin-top: 4vw;
+    max-width: 800px;
+    width: 100%;
+    text-align: start;
+}
+
+h1, h2 {
+    font-size: 3vw;
+    margin: 0;
+}
+
+.citation {
+    margin-top: 2vw;
+    font-style: italic;
+    font-size: 1.5vw;
+}
+
+.icons {
+    margin-top: 4vw;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.icons a {
+    transition: color 0.3s;
+}
+
+.icons .icon-linkedin {
+    color: #0077b5;
+}
+
+.icons .icon-facebook {
+    color: #1877f2;
+}
+
+.icons .icon-email {
+    color: #d14836;
+}
+
+.icons .icon-github {
+    color: #333;
+}
+
+.icons a:hover .icon-linkedin {
+    color: #005582;
+}
+
+.icons a:hover .icon-facebook {
+    color: #145dbf;
+}
+
+.icons a:hover .icon-email {
+    color: #a13426;
+}
+
+.icons a:hover .icon-github {
+    color: #24292e;
+}
+
+.icons a.active .icon-linkedin {
+    color: #004462;
+}
+
+.icons a.active .icon-facebook {
+    color: #104d9b;
+}
+
+.icons a.active .icon-email {
+    color: #81251a;
+}
+
+.icons a.active .icon-github {
+    color: #181717;
+}
+
+@media only screen and (max-width: 850px) {
+    .content {
+        margin-top: 10vw;
+    }
+    
+    h1, h2 {
+        font-size: 7vw;
+    }
+    
+    .citation {
+        margin-top: 8vw;
+        font-size: 5vw;
+    }
+    
+    .icons {
+        margin-top: 12vw;
+        gap: 15px;
+        justify-content: flex-start;
+    }
+
+    .icons a {
+        font-size: 3.5vw;
+    }
+}
