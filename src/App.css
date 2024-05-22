@@ -13,7 +13,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('C:\Users\Aukse\Desktop\Portfolio\aukse-portfolio\public\pics\background27.jpg');
+    background-image: url('C:\Users\Aukse\Desktop\Portfolio\aukse-portfolio\public\pics\backgroundMain.jpg');
     background-size: cover;
     background-position: center;
     filter: blur(14px);
