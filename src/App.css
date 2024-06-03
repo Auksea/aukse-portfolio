@@ -1,8 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: cursive;
-    font-family: emoji;
+    font-family: cursive, emoji;
     z-index: 0;
 }
 
@@ -13,7 +12,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('C:\Users\Aukse\Desktop\Portfolio\aukse-portfolio\public\pics\backgroundMain.jpg');
+    background-image: url('C:/Users/Aukse/Desktop/Portfolio/aukse-portfolio/public/pics/backgroundMain.jpg');
     background-size: cover;
     background-position: center;
     filter: blur(14px);
@@ -25,4 +24,86 @@ body::before {
     position: relative;
     z-index: 1;
     color: white;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 20px;
+    line-height: 1.2;
+}
+
+p {
+    margin: 0 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .header {
+        padding: 30px 15px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        padding: 25px 10px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 5px;
+    }
+
+    .main-content {
+        padding: 5px;
+    }
+
+    .header, .main-content {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        padding: 15px 5px;
+    }
+
+    .main-content {
+        padding: 5px;
+    }
+
+    .header, .main-content {
+        font-size: 80%;
+    }
 }

@@ -1,10 +1,36 @@
-.main-content {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: cursive, emoji;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('C:/Users/Aukse/Desktop/Portfolio/aukse-portfolio/public/pics/backgroundMain.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(14px);
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.header, .main-content {
   position: relative;
+  z-index: 1;
+  color: white;
+  padding: 20px;
+}
+
+.main-content {
   display: flex;
   flex-direction: column;
-  padding: 20px;
   justify-content: flex-start;
-  z-index: 1;
 }
 
 .row {
@@ -163,12 +189,12 @@
 
 @keyframes slideIn {
   from {
-    opacity: 0;
-    transform: translateX(-50px);
+      opacity: 0;
+      transform: translateX(-50px);
   }
   to {
-    opacity: 1;
-    transform: translateX(0);
+      opacity: 1;
+      transform: translateX(0);
   }
 }
 
@@ -196,56 +222,162 @@
 
 @media (max-width: 850px) {
   .column {
-    flex: 100%;
-    margin: 5px 0;
+      flex: 100%;
+      margin: 5px 0;
   }
 
   .about-me-header {
-    font-size: 24px;
-    margin-bottom: 30px;
+      font-size: 24px;
+      margin-bottom: 30px;
   }
 
   .aboutMeprg {
-    font-size: 22px;
+      font-size: 22px;
   }
 
   .paragraphMain {
-    font-size: 16px;
-    margin-left: 5px;
+      font-size: 16px;
+      margin-left: 5px;
   }
 
   .skillsHeader,
   .languagesHeader,
   .educationHeader2 {
-    font-size: 28px;
+      font-size: 28px;
   }
 
   .educationHeader3,
   .educationParagraph {
-    font-size: 16px;
+      font-size: 16px;
   }
 
   .skill-card {
-    flex-direction: column;
-    align-items: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
   }
 
   .skill-card p {
-    margin-left: 0;
-    margin-top: 10px;
+      margin-left: 0;
+      margin-top: 10px;
   }
 
   .services-text {
-    font-size: 20px;
+      font-size: 20px;
   }
 
   .services-description {
-    font-size: 16px;
+      font-size: 16px;
   }
 
   .connect-text {
-    font-size: 28px;
-    padding: 8px 16px;
+      font-size: 28px;
+      padding: 8px 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-me-header {
+      font-size: 20px;
+      margin-bottom: 20px;
+  }
+
+  .aboutMeprg {
+      font-size: 18px;
+  }
+
+  .paragraphMain {
+      font-size: 14px;
+  }
+
+  .skillsHeader,
+  .languagesHeader,
+  .educationHeader2 {
+      font-size: 24px;
+  }
+
+  .educationHeader3,
+  .educationParagraph {
+      font-size: 14px;
+  }
+
+  .services-text {
+      font-size: 18px;
+  }
+
+  .services-description {
+      font-size: 14px;
+      margin-bottom: 60px;
+  }
+
+  .connect-text {
+      font-size: 24px;
+      padding: 6px 12px;
+  }
+
+  .main-content {
+      padding: 10px;
+  }
+
+  .column {
+      padding: 10px;
+      margin: 5px 0;
+  }
+
+  .skill-card {
+      padding: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-me-header {
+      font-size: 18px;
+      margin-bottom: 15px;
+  }
+
+  .aboutMeprg {
+      font-size: 16px;
+  }
+
+  .paragraphMain {
+      font-size: 13px;
+  }
+
+  .skillsHeader,
+  .languagesHeader,
+  .educationHeader2 {
+      font-size: 20px;
+  }
+
+  .educationHeader3,
+  .educationParagraph {
+      font-size: 12px;
+  }
+
+  .services-text {
+      font-size: 16px;
+  }
+
+  .services-description {
+      font-size: 12px;
+      margin-bottom: 50px;
+  }
+
+  .connect-text {
+      font-size: 20px;
+      padding: 4px 10px;
+  }
+
+  .main-content {
+      padding: 5px;
+  }
+
+  .column {
+      padding: 5px;
+      margin: 2px 0;
+  }
+
+  .skill-card {
+      padding: 5px;
   }
 }
 
