@@ -1,4 +1,5 @@
-import React from 'react';
+import { faLinkedin, faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { ReactComponent as CSharpIcon } from 'devicon/icons/csharp/csharp-original.svg';
 import { ReactComponent as DotNetIcon } from 'devicon/icons/dot-net/dot-net-original.svg';
 import { ReactComponent as WordpressIcon } from 'devicon/icons/wordpress/wordpress-original.svg';
@@ -21,6 +22,8 @@ import { useState, useEffect } from 'react';
 import './MainContent.css';
 
 function MainContent() {
+
+  const [activeIcon, setActiveIcon] = useState(null);
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -185,14 +188,18 @@ function MainContent() {
         </div>
       </div>
     </div>
-  );    
+  );
+
+  const handleIconClick = (icon) => {
+    setActiveIcon(icon);
+  };
   
   return (
     <div className="main-content">
       <div id="about-me" className={`row slide-in ${isVisible ? 'visible' : ''}`}>
         <div className="column">
           <div className="about-me-header">
-            <h2 className='aboutMeHeader'>Who am I?</h2>
+            <h2>Who am I?</h2>
           </div>
           <AboutMeSection />
         </div>
@@ -209,6 +216,17 @@ function MainContent() {
           <a href="mailto:thinlightline88@gmail.com">Let's talk about your project!</a>
         </h2>
       </div>
+      <div className="icons">
+          <a href="https://www.linkedin.com/in/aukse17/" target="_blank" rel="noopener noreferrer" onClick={() => handleIconClick('linkedin')} className={activeIcon === 'linkedin' ? 'active' : ''}>
+            <FontAwesomeIcon icon={faLinkedin} size="2x" className="icon-linkedin" />
+          </a>
+          <a href="mailto:thinlightline88@gmail.com" onClick={() => handleIconClick('email')} className={activeIcon === 'email' ? 'active' : ''}>
+            <FontAwesomeIcon icon={faEnvelope} size="2x" className="icon-email" />
+          </a>
+          <a href="https://github.com/Auksea" target="_blank" rel="noopener noreferrer" onClick={() => handleIconClick('github')} className={activeIcon === 'github' ? 'active' : ''}>
+            <FontAwesomeIcon icon={faGithub} size="2x" className="icon-github" />
+          </a>
+        </div>
     </div>
   );  
 

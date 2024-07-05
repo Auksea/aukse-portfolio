@@ -1,36 +1,17 @@
 body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
-  font-family: cursive, emoji;
   z-index: 0;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('C:/Users/Aukse/Desktop/Portfolio/aukse-portfolio/public/pics/backgroundMain.jpg');
-  background-size: cover;
-  background-position: center;
-  filter: blur(14px);
-  z-index: -1;
-  opacity: 0.7;
-}
-
-.header, .main-content {
-  position: relative;
-  z-index: 1;
-  color: white;
-  padding: 20px;
-}
-
 .main-content {
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  color: black;
 }
 
 .row {
@@ -44,11 +25,13 @@ body::before {
   padding: 20px;
 }
 
-.about-me-header {
-  font-size: 30px;
+.about-me-header h2,
+.skillsHeader,
+.languagesHeader,
+.educationHeader2 {
+  font-size: 35px;
   text-align: start;
   margin-bottom: 40px;
-  font-style: italic;
 }
 
 .aboutMeprg {
@@ -97,12 +80,6 @@ body::before {
   font-size: 16px;
   margin-bottom: 50px !important;
   margin-top: 50px;
-}
-
-.skillsHeader,
-.languagesHeader,
-.educationHeader2 {
-  font-size: 36px;
 }
 
 .educationHeader3 {
@@ -200,16 +177,16 @@ body::before {
 
 .connect-container {
   margin-top: 4vw;
-  margin-bottom: 4vw;
+  margin-bottom: 1vw;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
 .connect-text {
-  font-size: 36px;
+  font-size: 28px;
   font-style: italic;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   display: inline-block;
@@ -220,6 +197,67 @@ body::before {
   color: inherit;
 }
 
+.icons {
+  display: flex;
+  margin-left: 5vw;
+  justify-content: start;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.icons a {
+  transition: color 0.3s;
+}
+
+.icons .icon-linkedin {
+  color: #0077b5;
+}
+
+.icons .icon-facebook {
+  color: #1877f2;
+}
+
+.icons .icon-email {
+  color: #d14836;
+}
+
+.icons .icon-github {
+  color: #333;
+}
+
+.icons a:hover .icon-linkedin {
+  color: #005582;
+}
+
+.icons a:hover .icon-facebook {
+  color: #145dbf;
+}
+
+.icons a:hover .icon-email {
+  color: #a13426;
+}
+
+.icons a:hover .icon-github {
+  color: #24292e;
+}
+
+.icons a.active .icon-linkedin {
+  color: #004462;
+}
+
+.icons a.active .icon-facebook {
+  color: #104d9b;
+}
+
+.icons a.active .icon-email {
+  color: #81251a;
+}
+
+.icons a.active .icon-github {
+  color: #181717;
+}
+
 @media (max-width: 850px) {
   .column {
       flex: 100%;
@@ -227,28 +265,28 @@ body::before {
   }
 
   .about-me-header {
-      font-size: 24px;
+      font-size: 20px;
       margin-bottom: 30px;
   }
 
   .aboutMeprg {
-      font-size: 22px;
+      font-size: 28px;
   }
 
   .paragraphMain {
-      font-size: 16px;
+      font-size: 18px;
       margin-left: 5px;
   }
 
   .skillsHeader,
   .languagesHeader,
   .educationHeader2 {
-      font-size: 28px;
+      font-size: 20px;
   }
 
   .educationHeader3,
   .educationParagraph {
-      font-size: 16px;
+      font-size: 18px;
   }
 
   .skill-card {
@@ -262,15 +300,15 @@ body::before {
   }
 
   .services-text {
-      font-size: 20px;
+      font-size: 18px;
   }
 
   .services-description {
-      font-size: 16px;
+      font-size: 18px;
   }
 
   .connect-text {
-      font-size: 28px;
+      font-size: 18px;
       padding: 8px 16px;
   }
 }
